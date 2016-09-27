@@ -285,6 +285,7 @@
 				D95E1BD91D88D63300F94976 /* Frameworks */,
 				D95E1BDA1D88D63300F94976 /* Headers */,
 				D95E1BDB1D88D63300F94976 /* Resources */,
+				7B4471011D9A59BD003949FC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +369,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B4471011D9A59BD003949FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ${PROJECT_DIR}\ncd ..\ncd ..\n\nif [ -d \"$Build\" ]; then\n# Build directory exist, thus this is carthage checkout\ncd Build\ncd iOS\nfind -E ${PROJECT_DIR} -regex \".*\\.(framework|bundle|xib)\" | xargs -I FILE cp -rf FILE .\nfi\n\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D95E1BD81D88D63300F94976 /* Sources */ = {
