@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B4470FC1D9A57F9003949FC /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470941D9A2D00003949FC /* FirebaseAnalytics.framework */; };
+		7B4470FD1D9A57F9003949FC /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470951D9A2D00003949FC /* FirebaseInstanceID.framework */; };
+		7B4470FE1D9A57F9003949FC /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470961D9A2D00003949FC /* GoogleInterchangeUtilities.framework */; };
+		7B4470FF1D9A57F9003949FC /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470971D9A2D00003949FC /* GoogleSymbolUtilities.framework */; };
+		7B4471001D9A57F9003949FC /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470981D9A2D00003949FC /* GoogleUtilities.framework */; };
 		D95E1BE71D88D63400F94976 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* Firebase.framework */; };
 		D95E1BEC1D88D63400F94976 /* FirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* FirebaseTests.swift */; };
 		D95E1BEE1D88D63400F94976 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = D95E1BE01D88D63300F94976 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -72,6 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B4470FC1D9A57F9003949FC /* FirebaseAnalytics.framework in Frameworks */,
+				7B4470FD1D9A57F9003949FC /* FirebaseInstanceID.framework in Frameworks */,
+				7B4470FE1D9A57F9003949FC /* GoogleInterchangeUtilities.framework in Frameworks */,
+				7B4470FF1D9A57F9003949FC /* GoogleSymbolUtilities.framework in Frameworks */,
+				7B4471001D9A57F9003949FC /* GoogleUtilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +295,7 @@
 				D95E1BD91D88D63300F94976 /* Frameworks */,
 				D95E1BDA1D88D63300F94976 /* Headers */,
 				D95E1BDB1D88D63300F94976 /* Resources */,
+				7B4470FB1D9A5693003949FC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +379,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B4470FB1D9A5693003949FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D95E1BD81D88D63300F94976 /* Sources */ = {
