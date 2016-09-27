@@ -7,6 +7,9 @@ Unofficial Firebase for Carthage.
 # Firebase
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+## Usage
+The iOS Example file is a sample of using core firebase (analytics). 
+You need to add <b>google info plist</b> in order to be able to run the project.
 
 ## Installation
 
@@ -29,8 +32,6 @@ github "soheilbm/Firebase" ~> 3.6.0
 
 Run `carthage update` to build the framework and drag the built `Firebase.framework` into your Xcode project.
 
-
-### Usage
 - Add the -ObjC flag to "Other Linker Settings"
 - Turn on ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES in your build settings.
 - Drag each framework from the directory named after the SDK into the Project
@@ -97,6 +98,8 @@ should make sure to include all of the frameworks from X when including the SDK.
   - GoogleNetworkingUtilities.framework
   
 
+
+### Current Version of Firebase libraries
 
            CocoaPod           | Version
 ----------------------------- | -------
