@@ -1,0 +1,10 @@
+framework module FirebaseInvites {
+
+  export *
+
+  umbrella header "FirebaseInvites.h"
+
+  header "FIRInvites.h"
+  header "FIRInvitesError.h"
+  header "FIRInvitesTargetApplication.h"
+}
