@@ -1,12 +1,15 @@
 # WARNING
 
-This is an unofficial Firebase for Carthage.
+Unofficial Firebase for Carthage.
 
 ----
 
 # Firebase
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
+## Usage
+The iOS Example file is a sample of using core firebase (analytics). 
+You need to add <b>google info plist</b> in order to be able to run the project.
 
 ## Installation
 
@@ -29,13 +32,9 @@ github "soheilbm/Firebase" ~> 3.6.0
 
 Run `carthage update` to build the framework and drag the built `Firebase.framework` into your Xcode project.
 
-
-### Usage
 - Add the -ObjC flag to "Other Linker Settings"
 - Turn on ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES in your build settings.
-
-
-Drag each framework from the directory named after the SDK into the Project
+- Drag each framework from the directory named after the SDK into the Project
    Navigator pane. Note that there may be no additional frameworks, in which
    case this directory will be empty. For instance, if you want the Database
    SDK, look in the Database folder for the required frameworks. In the dialog
@@ -52,19 +51,26 @@ should make sure to include all of the frameworks from X when including the SDK.
   - GoogleInterchangeUtilities.framework
   - GoogleSymbolUtilities.framework
   - GoogleUtilities.framework
+  
 #### AdMob (~> Analytics)
   - GoogleMobileAds.framework
+ 
 #### AppIndexing (~> Analytics)
   - FirebaseAppIndexing.framework
+  
 #### Auth (~> Analytics)
   - FirebaseAuth.framework
   - GoogleNetworkingUtilities.framework
+  
 #### Crash (~> Analytics)
   - FirebaseCrash.framework
+  
 #### Database (~> Analytics)
   - FirebaseDatabase.framework
+  
 #### DynamicLinks (~> Analytics)
   - FirebaseDynamicLinks.framework
+  
 #### Invites (~> Analytics)
   - FirebaseDynamicLinks.framework
   - FirebaseInvites.framework
@@ -78,16 +84,22 @@ should make sure to include all of the frameworks from X when including the SDK.
   You'll also need to add the resources in the
   Resources directory into your target's main
   bundle.
+  
 #### Messaging (~> Analytics)
   - FirebaseMessaging.framework
   - GoogleIPhoneUtilities.framework
+  
 #### RemoteConfig (~> Analytics)
   - FirebaseRemoteConfig.framework
   - GoogleIPhoneUtilities.framework
+  
 #### Storage (~> Analytics)
   - FirebaseStorage.framework
   - GoogleNetworkingUtilities.framework
+  
 
+
+### Current Version of Firebase libraries
 
            CocoaPod           | Version
 ----------------------------- | -------
@@ -123,4 +135,4 @@ Soheil B.Marvasti
 
 ## License
 
-Firebase is available under the MIT license. See the LICENSE file for more info.
+I do not own this project.
