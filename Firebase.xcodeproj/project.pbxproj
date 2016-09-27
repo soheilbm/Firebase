@@ -382,7 +382,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${PROJECT_DIR}\ncd ..\ncd ..\n\nif [ -d \"$Build\" ]; then\n# Build directory exist, thus this is carthage checkout\ncd Build\ncd iOS\nfind -E ${PROJECT_DIR} -regex \".*\\.(framework|bundle|xib)\" | xargs -I FILE cp -rf FILE .\nfi\n\n\n";
+			shellScript = "cd ${PROJECT_DIR}\ncd ..\ncd ..\n\nif [ -d \"Build\" ]; then\n  # Build directory exist, thus this is carthage checkout\n  cd Build\n  cd iOS\n  find -E ${PROJECT_DIR} -regex \".*\\.(framework|bundle|xib)\" | xargs -I FILE cp -rf FILE .\nfi\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
