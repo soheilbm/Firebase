@@ -9,7 +9,8 @@ Unofficial Firebase for Carthage.
 
 ## Usage
 The iOS Example file is a sample of using core firebase (analytics). 
-You need to add <b>google info plist</b> in order to be able to run the project.
+
+You need to add <b>GoogleService info plist</b> to your main project. (iOS Example project also needs Googleservice info plist)
 
 ## Installation
 
