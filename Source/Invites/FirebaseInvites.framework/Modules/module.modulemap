@@ -7,4 +7,6 @@ framework module FirebaseInvites {
   header "FIRInvites.h"
   header "FIRInvitesError.h"
   header "FIRInvitesTargetApplication.h"
+
+  link framework "AddressBook"
 }

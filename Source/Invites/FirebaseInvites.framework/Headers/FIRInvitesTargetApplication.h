@@ -13,12 +13,12 @@
 
 #import <Foundation/Foundation.h>
 
-// A user may send invites from iOS to users on other platforms, for e.g., users on Android.
-// Use |GINInviteTargetApplication| to specify the non-iOS application that must be installed or
-// opened when a user acts on an invite on that platform.
+/// A user may send invites from iOS to users on other platforms, for e.g., users on Android.
+/// Use @c GINInviteTargetApplication to specify the non-iOS application that must be installed or
+/// opened when a user acts on an invite on that platform.
 @interface FIRInvitesTargetApplication : NSObject
 
-// The Android client ID from the Google API console project.
+/// The Android client ID from the Google API console project.
 @property(nonatomic, copy) NSString *androidClientID;
 
 @end
