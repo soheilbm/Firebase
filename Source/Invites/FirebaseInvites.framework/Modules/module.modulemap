@@ -1,10 +1,18 @@
 framework module FirebaseInvites {
-
-  export *
-
   umbrella header "FirebaseInvites.h"
-
-  header "FIRInvites.h"
-  header "FIRInvitesError.h"
-  header "FIRInvitesTargetApplication.h"
+  export *
+  module * { export *}
+  link "c++"
+  link "sqlite3"
+  link "z"
+  link framework "AddressBook"
+  link framework "CoreGraphics"
+  link framework "CoreText"
+  link framework "Foundation"
+  link framework "MessageUI"
+  link framework "SafariServices"
+  link framework "Security"
+  link framework "SystemConfiguration"
+  link framework "UIKit"
+  link framework "WebKit"
 }

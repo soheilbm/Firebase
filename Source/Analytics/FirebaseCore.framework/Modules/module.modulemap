@@ -1,15 +1,10 @@
 framework module FirebaseCore {
-
-  export *
-
   umbrella header "FirebaseCore.h"
-
-  header "FIRAnalyticsConfiguration.h"
-  header "FIRApp.h"
-  header "FIRConfiguration.h"
-  header "FIROptions.h"
-
-  link framework "SystemConfiguration"
-
+  export *
+  module * { export *}
   link "c++"
+  link "z"
+  link framework "CoreGraphics"
+  link framework "Foundation"
+  link framework "UIKit"
 }

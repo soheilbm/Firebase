@@ -13,18 +13,27 @@
 
 #import <Foundation/Foundation.h>
 
-// Error domain for errors returned by the invite dialog.
+/// Error domain for errors returned by the invite dialog.
 extern NSString *const kFIRInvitesErrorDomain;
 
-// Possible error codes returned by the invite dialog.
+/// Possible error codes returned by the invite dialog.
 typedef NS_ENUM(NSInteger, FIRInvitesErrorCode) {
+  /// Unknown error.
   FIRInvitesErrorCodeUnknown = -400,
+  /// Invite is cancelled.
   FIRInvitesErrorCodeCanceled = -401,
+  /// Invite is cancelled by user.
   FIRInvitesErrorCodeCanceledByUser = -402,
+  /// Launch error.
   FIRInvitesErrorCodeLaunchError = -403,
+  /// Sign in error.
   FIRInvitesErrorCodeSignInError = -404,
+  /// Server error.
   FIRInvitesErrorCodeServerError = -490,
+  /// Network error.
   FIRInvitesErrorCodeNetworkError = -491,
+  /// SMS error.
   FIRInvitesErrorCodeSMSError = -492,
+  /// Invalid parameters error.
   FIRInvitesErrorCodeInvalidParameters = -497,
 };
