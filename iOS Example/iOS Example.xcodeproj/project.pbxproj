@@ -137,6 +137,7 @@
 			buildPhases = (
 				D95E1C3D1D88E71A00F94976 /* Sources */,
 				D95E1C3E1D88E71A00F94976 /* Frameworks */,
+				7B720B091E6D4197009F2AE8 /* ShellScript */,
 				D95E1C3F1D88E71A00F94976 /* Resources */,
 				7B4470861D9A27A3003949FC /* Embed Frameworks */,
 			);
@@ -201,6 +202,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B720B091E6D4197009F2AE8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../Source/Analytics/FirebaseAnalytics.framework",
+				"$(SRCROOT)/../Source/Analytics/FirebaseCore.framework",
+				"$(SRCROOT)/../Source/Analytics/FirebaseInstanceID.framework",
+				"$(SRCROOT)/../Source/Analytics/GoogleToolboxForMac.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D95E1C3D1D88E71A00F94976 /* Sources */ = {
