@@ -6,14 +6,15 @@
 //
 
 #import <GoogleMobileAds/GADAdLoader.h>
+#import <GoogleMobileAds/GoogleMobileAdsDefines.h>
 
 GAD_ASSUME_NONNULL_BEGIN
 
 /// Native ad image orientation preference.
 typedef NS_ENUM(NSInteger, GADNativeAdImageAdLoaderOptionsOrientation) {
-  GADNativeAdImageAdLoaderOptionsOrientationAny,       ///< No orientation preference.
-  GADNativeAdImageAdLoaderOptionsOrientationPortrait,  ///< Prefer portrait images.
-  GADNativeAdImageAdLoaderOptionsOrientationLandscape  ///< Prefer landscape images.
+  GADNativeAdImageAdLoaderOptionsOrientationAny = 1,       ///< No orientation preference.
+  GADNativeAdImageAdLoaderOptionsOrientationPortrait = 2,  ///< Prefer portrait images.
+  GADNativeAdImageAdLoaderOptionsOrientationLandscape = 3  ///< Prefer landscape images.
 };
 
 /// Ad loader options for native ad image settings.

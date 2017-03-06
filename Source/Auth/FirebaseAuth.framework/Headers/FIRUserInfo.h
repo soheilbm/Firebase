@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** @protocol FIRUserInfo
+/**
     @brief Represents user data returned from an identity provider.
  */
 @protocol FIRUserInfo <NSObject>
