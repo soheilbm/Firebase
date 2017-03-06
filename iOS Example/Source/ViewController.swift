@@ -8,7 +8,7 @@
 
 import UIKit
 
-import FirebaseAnalytics
+import Firebase
 
 class ViewController: UIViewController {
 

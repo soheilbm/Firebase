@@ -13,6 +13,7 @@
 		7B4470B71D9A2D4D003949FC /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470AF1D9A2D4D003949FC /* GoogleSymbolUtilities.framework */; };
 		7B4470B91D9A2D4D003949FC /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470B01D9A2D4D003949FC /* GoogleUtilities.framework */; };
 		7B4470BC1D9A2E31003949FC /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470BB1D9A2E31003949FC /* Firebase.framework */; };
+		7B720B081E6D3F72009F2AE8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B720B071E6D3F72009F2AE8 /* GoogleService-Info.plist */; };
 		D95E1C451D88E71A00F94976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C441D88E71A00F94976 /* AppDelegate.swift */; };
 		D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C461D88E71A00F94976 /* ViewController.swift */; };
 		D95E1C4A1D88E71A00F94976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C481D88E71A00F94976 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		7B4470B01D9A2D4D003949FC /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
 		7B4470BB1D9A2E31003949FC /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = "../build/Release-iphoneos/Firebase.framework"; sourceTree = "<group>"; };
 		7B4470BD1D9A40CA003949FC /* iOS Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iOS Example.entitlements"; sourceTree = "<group>"; };
+		7B720B071E6D3F72009F2AE8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D95E1C411D88E71A00F94976 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1C441D88E71A00F94976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D95E1C461D88E71A00F94976 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4470BD1D9A40CA003949FC /* iOS Example.entitlements */,
+				7B720B071E6D3F72009F2AE8 /* GoogleService-Info.plist */,
 				7B4470AC1D9A2D4D003949FC /* FirebaseAnalytics.framework */,
 				7B4470AD1D9A2D4D003949FC /* FirebaseInstanceID.framework */,
 				7B4470AE1D9A2D4D003949FC /* GoogleInterchangeUtilities.framework */,
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D95E1C4F1D88E71A00F94976 /* LaunchScreen.storyboard in Resources */,
+				7B720B081E6D3F72009F2AE8 /* GoogleService-Info.plist in Resources */,
 				D95E1C4C1D88E71A00F94976 /* Assets.xcassets in Resources */,
 				D95E1C4A1D88E71A00F94976 /* Main.storyboard in Resources */,
 			);
