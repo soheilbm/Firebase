@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B720AC81E6D1562009F2AE8 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B720AC71E6D1562009F2AE8 /* Firebase.h */; };
+		7B720AC81E6D1562009F2AE8 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B720AC71E6D1562009F2AE8 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D95E1BE71D88D63400F94976 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* Firebase.framework */; };
 		D95E1BEC1D88D63400F94976 /* FirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* FirebaseTests.swift */; };
 /* End PBXBuildFile section */
@@ -29,7 +29,6 @@
 		7B4470701D9A2715003949FC /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		7B4470711D9A2715003949FC /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
 		7B720AC71E6D1562009F2AE8 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		7B720AC91E6D156B009F2AE8 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		7B720ACA1E6D1580009F2AE8 /* AdMob */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AdMob; sourceTree = "<group>"; };
 		7B720ACB1E6D1580009F2AE8 /* Analytics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Analytics; sourceTree = "<group>"; };
 		7B720ACC1E6D1580009F2AE8 /* AppIndexing */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIndexing; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 				7B720AD21E6D1580009F2AE8 /* Messaging */,
 				D95E1BE11D88D63300F94976 /* Info.plist */,
 				7B720AC71E6D1562009F2AE8 /* Firebase.h */,
-				7B720AC91E6D156B009F2AE8 /* module.modulemap */,
 			);
 			path = Source;
 			sourceTree = "<group>";
