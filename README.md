@@ -6,6 +6,9 @@
 
 ----
 
+## Warning
+If you are encountering **Undefined symbols** reffering to Analytics Discrepancies, please look at issue [#10](https://github.com/soheilbm/Firebase/issues/10). Thanks to [@brianlenz](https://github.com/brianlenz).
+
 ## Usage
 The iOS Example file is a sample of using core firebase (analytics). 
 
@@ -110,28 +113,28 @@ should make sure to include all of the frameworks from X when including the SDK.
 
 ### Current Version of Firebase libraries
 
-           Carthage           | Version
------------------------------ | -------
-Firebase                      | 3.14.0
-FirebaseAnalytics             | 3.7.0
-FirebaseAppIndexing           | 1.2.0
-FirebaseAuth                  | 3.1.1
-FirebaseCore                  | 3.5.1
-FirebaseCrash                 | 1.1.6
-FirebaseDatabase              | 3.1.2
-FirebaseDynamicLinks          | 1.3.3
-FirebaseInstanceID            | 1.0.9
-FirebaseInvites               | 1.2.4
-FirebaseMessaging             | 1.2.2
-FirebaseRemoteConfig          | 1.3.4
-FirebaseStorage               | 1.1.0
-GTMOAuth2                     | 1.1.4
-GTMSessionFetcher             | 1.1.8
-Google-Mobile-Ads-SDK         | 7.18.0
-GoogleAPIClientForREST        | 1.2.0
-GoogleSignIn                  | 4.0.2
-GoogleToolboxForMac           | 2.1.1
-Protobuf                      | 3.2.0
+|           Carthage           | Version |
+| ----------------------------- | ------- |
+| Firebase                      | 3.14.0 |
+| FirebaseAnalytics             | 3.7.0 |
+| FirebaseAppIndexing           | 1.2.0 |
+| FirebaseAuth                  | 3.1.1 |
+| FirebaseCore                  | 3.5.1 |
+| FirebaseCrash                 | 1.1.6 |
+| FirebaseDatabase              | 3.1.2 |
+| FirebaseDynamicLinks          | 1.3.3 |
+| FirebaseInstanceID            | 1.0.9 |
+| FirebaseInvites               | 1.2.4 |
+| FirebaseMessaging             | 1.2.2 |
+| FirebaseRemoteConfig          | 1.3.4 |
+| FirebaseStorage               | 1.1.0 |
+| GTMOAuth2                     | 1.1.4 |
+| GTMSessionFetcher             | 1.1.8 |
+| Google-Mobile-Ads-SDK         | 7.18.0|
+| GoogleAPIClientForREST        | 1.2.0 |
+| GoogleSignIn                  | 4.0.2 |
+| GoogleToolboxForMac           | 2.1.1 |
+| Protobuf                      | 3.2.0 |
 
 
 
