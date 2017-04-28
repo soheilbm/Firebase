@@ -8,7 +8,6 @@ framework module FirebaseInvites {
   link framework "AddressBook"
   link framework "CoreGraphics"
   link framework "CoreText"
-  link framework "Foundation"
   link framework "MessageUI"
   link framework "SafariServices"
   link framework "Security"

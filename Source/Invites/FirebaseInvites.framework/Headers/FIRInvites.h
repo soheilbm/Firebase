@@ -51,7 +51,7 @@ typedef NS_ENUM(NSUInteger, FIRReceivedInviteMatchType) {
 /// |invitationsIds| holds the IDs of the invitations sent by the user.
 /// |error| is nil upon success. Otherwise, it will contain one of the errors defined in
 /// FIRInvitesError.h.
-- (void)inviteFinishedWithInvitations:(NSArray *)invitationIds
+- (void)inviteFinishedWithInvitations:(NSArray <NSString *> *)invitationIds
                                 error:(nullable NSError *)error;
 
 @end
@@ -80,8 +80,10 @@ typedef NS_ENUM(NSUInteger, FIRReceivedInviteMatchType) {
 /// opened when a user acts on an invite on that platform.
 - (void)setOtherPlatformsTargetApplication:(FIRInvitesTargetApplication *)targetApplication;
 
-/// Sets the app description displayed in email invitations. Maximum length is 1000 characters.
-- (void)setDescription:(NSString *)description;
+/// Sets the app description displayed in email invitations (max 1000 characters), but it is
+/// no longer supported in Firebase App Invites.
+- (void)setDescription:(NSString *)description
+      __deprecated_msg("setDescription is no longer supported in Firebase App Invites.");
 
 /// Sets an image for invitations. The imageURI is required to be in absolute format. The URI can
 /// be either a content URI with extension "jpg" or "png", or a network url with scheme "https".
