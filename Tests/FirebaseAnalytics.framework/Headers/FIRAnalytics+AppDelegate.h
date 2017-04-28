@@ -8,8 +8,8 @@
  * To save time integrating Firebase Analytics in an application, Firebase Analytics does not
  * require delegation implementation from the AppDelegate. Instead this is automatically done by
  * Firebase Analytics. Should you choose instead to delegate manually, you can turn off the App
- * Delegate Proxy by adding FirebaseAppDelegateProxyEnabled into your Info.plist and setting it
- * to NO, and adding the methods in this category to corresponding delegation handlers.
+ * Delegate Proxy by adding FirebaseAppDelegateProxyEnabled into your app's Info.plist and setting
+ * it to NO, and adding the methods in this category to corresponding delegation handlers.
  *
  * To handle Universal Links, you must return YES in
  * [UIApplicationDelegate application:didFinishLaunchingWithOptions:].
@@ -34,9 +34,9 @@
 /**
  * Handles the event when the app is launched by a URL.
  *
- * Call this method from [UIApplicationDelegate application:openURL:options:] (on iOS 9.0 and
- * above), or [UIApplicationDelegate application:openURL:sourceApplication:annotation:] (on iOS 8.x
- * and below) in your app.
+ * Call this method from [UIApplicationDelegate application:openURL:options:] &#40;on iOS 9.0 and
+ * above&#41;, or [UIApplicationDelegate application:openURL:sourceApplication:annotation:] &#40;on
+ * iOS 8.x and below&#41; in your app.
  *
  * @param url The URL resource to open. This resource can be a network resource or a file.
  */
