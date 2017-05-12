@@ -111,12 +111,12 @@ typedef NS_ENUM(NSInteger, FIRInstanceIDAPNSTokenType) {
 
 /**
  *  Instance ID provides a unique identifier for each app instance and a mechanism
- *  to authenticate and authorize actions (for example, sending a GCM message).
+ *  to authenticate and authorize actions (for example, sending an FCM message).
  *
  *  Instance ID is long lived but, may be reset if the device is not used for
  *  a long time or the Instance ID service detects a problem.
- *  If Instance ID is reset, the app will be notified with a `com.firebase.iid.token-refresh`
- *  notification.
+ *  If Instance ID is reset, the app will be notified via
+ *  `kFIRInstanceIDTokenRefreshNotification`.
  *
  *  If the Instance ID has become invalid, the app can request a new one and
  *  send it to the app server.

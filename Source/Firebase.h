@@ -1,21 +1,11 @@
-#import <UIKit/UIKit.h>
-
-//! Project version number for Firebase.
-FOUNDATION_EXPORT double FirebaseVersionNumber;
-
-//! Project version string for Firebase.
-FOUNDATION_EXPORT const unsigned char FirebaseVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <Firebase/PublicHeader.h>
-
 #import <FirebaseAnalytics/FirebaseAnalytics.h>
+#import <FirebaseCore/FirebaseCore.h>
 
 #if !defined(__has_include)
   #error "Firebase.h won't import anything if your compiler doesn't support __has_include. Please \
           import the headers individually."
 #else
   #if __has_include(<FirebaseAppIndexing/FirebaseAppIndexing.h>)
-    #import <FirebaseCore/FirebaseCore.h>
     #import <FirebaseAppIndexing/FirebaseAppIndexing.h>
   #endif
 

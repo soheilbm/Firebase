@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @method handleUniversalLink:completion:
  * @abstract Convenience method to handle a Universal Link whether it is long or short. A long link
  *     will call the handler immediately, but a short link may not.
- * @param universalLinkURL A Universal Link URL.
+ * @param url A Universal Link URL.
  * @param completion A block that handles the outcome of attempting to create a FIRDynamicLink.
  * @return YES if FIRDynamicLinks is handling the link, otherwise, NO.
  */
