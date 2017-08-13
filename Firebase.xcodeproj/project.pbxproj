@@ -7,17 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B2812A31F40400400F51B4D /* Performance in Resources */ = {isa = PBXBuildFile; fileRef = 7B2812A21F40400400F51B4D /* Performance */; };
 		7B720AC81E6D1562009F2AE8 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B720AC71E6D1562009F2AE8 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B2812A21F40400400F51B4D /* Performance */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Performance; sourceTree = "<group>"; };
-		7B44706D1D9A2715003949FC /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = ../Source/Analytics/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		7B44706E1D9A2715003949FC /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = ../Source/Analytics/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		7B44706F1D9A2715003949FC /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		7B4470701D9A2715003949FC /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		7B4470711D9A2715003949FC /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
 		7B720AC71E6D1562009F2AE8 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		7B720ACA1E6D1580009F2AE8 /* AdMob */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AdMob; sourceTree = "<group>"; };
 		7B720ACB1E6D1580009F2AE8 /* Analytics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Analytics; sourceTree = "<group>"; };
@@ -48,7 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				D95E1BDF1D88D63300F94976 /* Source */,
-				D95E1BF71D88DFFD00F94976 /* Frameworks */,
 				D95E1BDE1D88D63300F94976 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,19 +72,6 @@
 				7B720AC71E6D1562009F2AE8 /* Firebase.h */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		D95E1BF71D88DFFD00F94976 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7B44706D1D9A2715003949FC /* FirebaseAnalytics.framework */,
-				7B44706E1D9A2715003949FC /* FirebaseInstanceID.framework */,
-				7B44706F1D9A2715003949FC /* GoogleInterchangeUtilities.framework */,
-				7B4470701D9A2715003949FC /* GoogleSymbolUtilities.framework */,
-				7B4470711D9A2715003949FC /* GoogleUtilities.framework */,
-			);
-			name = Frameworks;
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +146,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B2812A31F40400400F51B4D /* Performance in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
