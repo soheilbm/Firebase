@@ -151,4 +151,4 @@ Soheil B.Marvasti
 
 
 ## License
-I do not own this project. This is just a simple repo to making Firebase class compatible with Carthage. 
+I do not own this project. This is just a simple repository to bring Carthage compatibility to Firebase. 
