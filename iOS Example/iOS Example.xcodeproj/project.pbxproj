@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2812A51F40469200F51B4D /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2812A41F40469200F51B4D /* FirebaseCoreDiagnostics.framework */; };
+		7B2812A81F4046A600F51B4D /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2812A61F4046A600F51B4D /* FirebaseNanoPB.framework */; };
+		7B2812A91F4046A600F51B4D /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B2812A71F4046A600F51B4D /* GoogleToolboxForMac.framework */; };
 		7B4470B11D9A2D4D003949FC /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470AC1D9A2D4D003949FC /* FirebaseAnalytics.framework */; };
 		7B4470B31D9A2D4D003949FC /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470AD1D9A2D4D003949FC /* FirebaseInstanceID.framework */; };
 		7B4470BC1D9A2E31003949FC /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4470BB1D9A2E31003949FC /* Firebase.framework */; };
 		7B720B081E6D3F72009F2AE8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B720B071E6D3F72009F2AE8 /* GoogleService-Info.plist */; };
 		7B720B1E1E6D440B009F2AE8 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B720B1D1E6D440B009F2AE8 /* FirebaseCore.framework */; };
-		7B720B201E6D4415009F2AE8 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B720B1F1E6D4415009F2AE8 /* GoogleToolboxForMac.framework */; };
 		D95E1C451D88E71A00F94976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C441D88E71A00F94976 /* AppDelegate.swift */; };
 		D95E1C471D88E71A00F94976 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1C461D88E71A00F94976 /* ViewController.swift */; };
 		D95E1C4A1D88E71A00F94976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95E1C481D88E71A00F94976 /* Main.storyboard */; };
@@ -34,6 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B2812A41F40469200F51B4D /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		7B2812A61F4046A600F51B4D /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		7B2812A71F4046A600F51B4D /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
 		7B44709F1D9A2D31003949FC /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4470A21D9A2D3F003949FC /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = ../Source/Analytics/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		7B4470A31D9A2D3F003949FC /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = ../Source/Analytics/FirebaseInstanceID.framework; sourceTree = "<group>"; };
@@ -65,8 +70,10 @@
 				7B720B1E1E6D440B009F2AE8 /* FirebaseCore.framework in Frameworks */,
 				7B4470BC1D9A2E31003949FC /* Firebase.framework in Frameworks */,
 				7B4470B11D9A2D4D003949FC /* FirebaseAnalytics.framework in Frameworks */,
+				7B2812A51F40469200F51B4D /* FirebaseCoreDiagnostics.framework in Frameworks */,
 				7B4470B31D9A2D4D003949FC /* FirebaseInstanceID.framework in Frameworks */,
-				7B720B201E6D4415009F2AE8 /* GoogleToolboxForMac.framework in Frameworks */,
+				7B2812A91F4046A600F51B4D /* GoogleToolboxForMac.framework in Frameworks */,
+				7B2812A81F4046A600F51B4D /* FirebaseNanoPB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,9 @@
 			children = (
 				7B4470BD1D9A40CA003949FC /* iOS Example.entitlements */,
 				7B720B071E6D3F72009F2AE8 /* GoogleService-Info.plist */,
+				7B2812A61F4046A600F51B4D /* FirebaseNanoPB.framework */,
+				7B2812A71F4046A600F51B4D /* GoogleToolboxForMac.framework */,
+				7B2812A41F40469200F51B4D /* FirebaseCoreDiagnostics.framework */,
 				7B720B1F1E6D4415009F2AE8 /* GoogleToolboxForMac.framework */,
 				7B720B1D1E6D440B009F2AE8 /* FirebaseCore.framework */,
 				7B4470AC1D9A2D4D003949FC /* FirebaseAnalytics.framework */,
@@ -210,6 +220,8 @@
 				"$(SRCROOT)/../Source/Analytics/FirebaseCore.framework",
 				"$(SRCROOT)/../Source/Analytics/FirebaseInstanceID.framework",
 				"$(SRCROOT)/../Source/Analytics/GoogleToolboxForMac.framework",
+				"$(SRCROOT)/../Source/Analytics/FirebaseNanoPB.framework",
+				"$(SRCROOT)/../Source/Analytics/FirebaseCoreDiagnostics.framework",
 			);
 			outputPaths = (
 			);
