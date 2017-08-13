@@ -2,12 +2,11 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![GitHub release](https://img.shields.io/github/release/soheilbm/Firebase.svg)](https://github.com/soheilbm/Firebase/releases)
 
-#### Unofficial Firebase support for Carthage.
+#### Unofficial Carthage support for Firebase.
+
+If you are looking for open source Firebase repository you may refer to [Firebase-iOS-SDK](https://github.com/firebase/firebase-ios-sdk).
 
 ----
-
-## Warning
-If you are encountering **Undefined symbols** reffering to Analytics Discrepancies, please look at issue [#10](https://github.com/soheilbm/Firebase/issues/10). Thanks to [@brianlenz](https://github.com/brianlenz).
 
 ## Usage
 The iOS Example file is a sample of using core firebase (analytics). 
@@ -47,67 +46,74 @@ Run `carthage update` to build the framework and drag the built `Firebase.framew
 
 "(~> X)" below means that the SDK requires all of the frameworks from X. You
 should make sure to include all of the frameworks from X when including the SDK.
+Add the following Framework to your project with [carthage copy-framework](https://github.com/Carthage/Carthage#getting-started) method.
 
 #### Analytics
-  - FirebaseAnalytics.framework
-  - FirebaseCore.framework
-  - FirebaseInstanceID.framework
-  - GoogleToolboxForMac.framework
+    - FirebaseAnalytics.framework
+    - FirebaseCore.framework
+    - FirebaseCoreDiagnostics.framework
+    - FirebaseNanoPB.framework
+    - FirebaseInstanceID.framework
+    - GoogleToolboxForMac.framework
+    - nanopb.framework
 
 
 #### AdMob (~> Analytics)
-  - GoogleMobileAds.framework
-
-
-#### AppIndexing (~> Analytics)
-  - FirebaseAppIndexing.framework
+    - GoogleMobileAds.framework
 
 
 #### Auth (~> Analytics)
-  - FirebaseAuth.framework
-  - GTMSessionFetcher.framework
+    - FirebaseAuth.framework
+    - GTMSessionFetcher.framework
 
 
 #### Crash (~> Analytics)
-  - FirebaseCrash.framework
-  - Protobuf.framework
+    - FirebaseCrash.framework
+    - Protobuf.framework
 
 
 #### Database (~> Analytics)
-  - FirebaseDatabase.framework
+    - FirebaseDatabase.framework
 
 
 #### DynamicLinks (~> Analytics)
-  - FirebaseDynamicLinks.framework
+    - FirebaseDynamicLinks.framework
 
 
 #### Invites (~> Analytics)
-  - FirebaseDynamicLinks.framework
-  - FirebaseInvites.framework
-  - GTMOAuth2.framework
-  - GTMSessionFetcher.framework
-  - GoogleAPIClientForREST.framework
-  - GoogleSignIn.framework
-  - Protobuf.framework
+    - FirebaseDynamicLinks.framework
+    - FirebaseInvites.framework
+    - GTMOAuth2.framework
+    - GTMSessionFetcher.framework
+    - GoogleAPIClientForREST.framework
+    - GoogleSignIn.framework
+    - Protobuf.framework
 
-  You'll also need to add the resources in the
-  Resources directory into your target's main
-  bundle.
-  
-  
+
+You'll also need to add the resources in the
+Resources directory into your target's main
+bundle.
+
+
 #### Messaging (~> Analytics)
-  - FirebaseMessaging.framework
-  - Protobuf.framework
+    - FirebaseMessaging.framework
+    - Protobuf.framework
+
+
+#### Performance (~> Analytics)
+    - FirebasePerformance.framework
+    - GTMSessionFetcher.framework
+    - Protobuf.framework
 
 
 #### RemoteConfig (~> Analytics)
-  - FirebaseRemoteConfig.framework
-  - Protobuf.framework
+    - FirebaseRemoteConfig.framework
+    - Protobuf.framework
 
 
 #### Storage (~> Analytics)
-  - FirebaseStorage.framework
-  - GTMSessionFetcher.framework
+    - FirebaseStorage.framework
+    - GTMSessionFetcher.framework
 
 
 
@@ -115,26 +121,27 @@ should make sure to include all of the frameworks from X when including the SDK.
 
 |           Carthage           | Version |
 | ----------------------------- | ------- |
-| Firebase                      | 3.14.0 |
-| FirebaseAnalytics             | 3.7.0 |
-| FirebaseAppIndexing           | 1.2.0 |
-| FirebaseAuth                  | 3.1.1 |
-| FirebaseCore                  | 3.5.1 |
-| FirebaseCrash                 | 1.1.6 |
-| FirebaseDatabase              | 3.1.2 |
-| FirebaseDynamicLinks          | 1.3.3 |
-| FirebaseInstanceID            | 1.0.9 |
-| FirebaseInvites               | 1.2.4 |
-| FirebaseMessaging             | 1.2.2 |
-| FirebaseRemoteConfig          | 1.3.4 |
-| FirebaseStorage               | 1.1.0 |
+| Firebase                      | 4.0.4 |
+| FirebaseAnalytics             | 4.0.2 |
+| FirebaseAuth                  | 4.0.0 |
+| FirebaseCore                  | 4.0.4 |
+| FirebaseCrash                 | 2.0.0 |
+| FirebaseDatabase              | 4.0.0 |
+| FirebaseDynamicLinks          | 2.0.0 |
+| FirebaseInstanceID            | 2.0.0 |
+| FirebaseInvites               | 2.0.0 |
+| FirebaseMessaging             | 2.0.0 |
+| FirebasePerformance           | 1.0.3 |
+| FirebaseRemoteConfig          | 2.0.1 |
+| FirebaseStorage               | 2.0.0 |
 | GTMOAuth2                     | 1.1.4 |
-| GTMSessionFetcher             | 1.1.8 |
-| Google-Mobile-Ads-SDK         | 7.18.0|
-| GoogleAPIClientForREST        | 1.2.0 |
+| GTMSessionFetcher             | 1.1.11 |
+| Google-Mobile-Ads-SDK         | 7.21.0 |
+| GoogleAPIClientForREST        | 1.3.0 |
 | GoogleSignIn                  | 4.0.2 |
 | GoogleToolboxForMac           | 2.1.1 |
-| Protobuf                      | 3.2.0 |
+| Protobuf                      | 3.3.0 |
+| nanopb                        | 0.3.8 |
 
 
 
@@ -144,4 +151,4 @@ Soheil B.Marvasti
 
 
 ## License
-I do not own this project.
+I do not own this project. This is just a simple repository to bring Carthage compatibility to Firebase. 

@@ -8,30 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7B720AC81E6D1562009F2AE8 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B720AC71E6D1562009F2AE8 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D95E1BE71D88D63400F94976 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95E1BDD1D88D63300F94976 /* Firebase.framework */; };
-		D95E1BEC1D88D63400F94976 /* FirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95E1BEB1D88D63400F94976 /* FirebaseTests.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D95E1BE81D88D63400F94976 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D95E1BD41D88D63200F94976 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D95E1BDC1D88D63300F94976;
-			remoteInfo = Firebase;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		7B44706D1D9A2715003949FC /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = ../Source/Analytics/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		7B44706E1D9A2715003949FC /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = ../Source/Analytics/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		7B44706F1D9A2715003949FC /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		7B4470701D9A2715003949FC /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		7B4470711D9A2715003949FC /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = "<group>"; };
+		7B2812A21F40400400F51B4D /* Performance */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Performance; sourceTree = "<group>"; };
 		7B720AC71E6D1562009F2AE8 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		7B720ACA1E6D1580009F2AE8 /* AdMob */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AdMob; sourceTree = "<group>"; };
 		7B720ACB1E6D1580009F2AE8 /* Analytics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Analytics; sourceTree = "<group>"; };
-		7B720ACC1E6D1580009F2AE8 /* AppIndexing */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIndexing; sourceTree = "<group>"; };
 		7B720ACD1E6D1580009F2AE8 /* Auth */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Auth; sourceTree = "<group>"; };
 		7B720ACE1E6D1580009F2AE8 /* Crash */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Crash; sourceTree = "<group>"; };
 		7B720ACF1E6D1580009F2AE8 /* Database */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Database; sourceTree = "<group>"; };
@@ -42,9 +25,6 @@
 		7B720AD41E6D158A009F2AE8 /* Storage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Storage; sourceTree = "<group>"; };
 		D95E1BDD1D88D63300F94976 /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95E1BE11D88D63300F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D95E1BE61D88D63400F94976 /* FirebaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D95E1BEB1D88D63400F94976 /* FirebaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTests.swift; sourceTree = "<group>"; };
-		D95E1BED1D88D63400F94976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,14 +35,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D95E1BE31D88D63400F94976 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D95E1BE71D88D63400F94976 /* Firebase.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,8 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				D95E1BDF1D88D63300F94976 /* Source */,
-				D95E1BF71D88DFFD00F94976 /* Frameworks */,
-				D95E1BEA1D88D63400F94976 /* Tests */,
 				D95E1BDE1D88D63300F94976 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				D95E1BDD1D88D63300F94976 /* Firebase.framework */,
-				D95E1BE61D88D63400F94976 /* FirebaseTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,11 +57,11 @@
 		D95E1BDF1D88D63300F94976 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7B2812A21F40400400F51B4D /* Performance */,
 				7B720AD31E6D158A009F2AE8 /* RemoteConfig */,
 				7B720AD41E6D158A009F2AE8 /* Storage */,
 				7B720ACA1E6D1580009F2AE8 /* AdMob */,
 				7B720ACB1E6D1580009F2AE8 /* Analytics */,
-				7B720ACC1E6D1580009F2AE8 /* AppIndexing */,
 				7B720ACD1E6D1580009F2AE8 /* Auth */,
 				7B720ACE1E6D1580009F2AE8 /* Crash */,
 				7B720ACF1E6D1580009F2AE8 /* Database */,
@@ -103,28 +72,6 @@
 				7B720AC71E6D1562009F2AE8 /* Firebase.h */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		D95E1BEA1D88D63400F94976 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				D95E1BEB1D88D63400F94976 /* FirebaseTests.swift */,
-				D95E1BED1D88D63400F94976 /* Info.plist */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		D95E1BF71D88DFFD00F94976 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7B44706D1D9A2715003949FC /* FirebaseAnalytics.framework */,
-				7B44706E1D9A2715003949FC /* FirebaseInstanceID.framework */,
-				7B44706F1D9A2715003949FC /* GoogleInterchangeUtilities.framework */,
-				7B4470701D9A2715003949FC /* GoogleSymbolUtilities.framework */,
-				7B4470711D9A2715003949FC /* GoogleUtilities.framework */,
-			);
-			name = Frameworks;
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,24 +107,6 @@
 			productReference = D95E1BDD1D88D63300F94976 /* Firebase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D95E1BE51D88D63400F94976 /* FirebaseTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D95E1BF41D88D63400F94976 /* Build configuration list for PBXNativeTarget "FirebaseTests" */;
-			buildPhases = (
-				D95E1BE21D88D63400F94976 /* Sources */,
-				D95E1BE31D88D63400F94976 /* Frameworks */,
-				D95E1BE41D88D63400F94976 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D95E1BE91D88D63400F94976 /* PBXTargetDependency */,
-			);
-			name = FirebaseTests;
-			productName = FirebaseTests;
-			productReference = D95E1BE61D88D63400F94976 /* FirebaseTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,10 +120,6 @@
 					D95E1BDC1D88D63300F94976 = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-					};
-					D95E1BE51D88D63400F94976 = {
-						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -212,20 +137,12 @@
 			projectRoot = "";
 			targets = (
 				D95E1BDC1D88D63300F94976 /* Firebase */,
-				D95E1BE51D88D63400F94976 /* FirebaseTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D95E1BDB1D88D63300F94976 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D95E1BE41D88D63400F94976 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,23 +175,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D95E1BE21D88D63400F94976 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D95E1BEC1D88D63400F94976 /* FirebaseTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D95E1BE91D88D63400F94976 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D95E1BDC1D88D63300F94976 /* Firebase */;
-			targetProxy = D95E1BE81D88D63400F94976 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D95E1BEF1D88D63400F94976 /* Debug */ = {
@@ -453,28 +354,6 @@
 			};
 			name = Release;
 		};
-		D95E1BF51D88D63400F94976 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = FirebaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.soheilbm.--PROJECT-NAME--Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		D95E1BF61D88D63400F94976 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = FirebaseTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.soheilbm.--PROJECT-NAME--Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -492,15 +371,6 @@
 			buildConfigurations = (
 				D95E1BF21D88D63400F94976 /* Debug */,
 				D95E1BF31D88D63400F94976 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D95E1BF41D88D63400F94976 /* Build configuration list for PBXNativeTarget "FirebaseTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D95E1BF51D88D63400F94976 /* Debug */,
-				D95E1BF61D88D63400F94976 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
