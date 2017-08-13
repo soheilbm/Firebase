@@ -13,6 +13,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "FIRInvitesSwiftNameSupport.h"
+
 @class FIRInvitesTargetApplication;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -25,9 +27,10 @@ typedef NS_ENUM(NSUInteger, FIRReceivedInviteMatchType) {
   /// The match between the deeplink and this device is exact, hence you could reveal any personal
   /// information related to the deep link.
   FIRReceivedInviteMatchTypeStrong
-};
+} FIR_SWIFT_NAME(ReceivedInviteMatchType);
 
 /// The class that represents a received invitation.
+FIR_SWIFT_NAME(ReceivedInvite)
 @interface FIRReceivedInvite : NSObject
 
 /// The invite ID that was passed to the app.
@@ -44,6 +47,7 @@ typedef NS_ENUM(NSUInteger, FIRReceivedInviteMatchType) {
 @class GINInviteTargetApplication;
 
 /// The protocol to receive the result of the invite action.
+FIR_SWIFT_NAME(InviteDelegate)
 @protocol FIRInviteDelegate <NSObject>
 
 @optional
@@ -57,6 +61,7 @@ typedef NS_ENUM(NSUInteger, FIRReceivedInviteMatchType) {
 @end
 
 /// The protocol to configure the invite dialog.
+FIR_SWIFT_NAME(InviteBuilder)
 @protocol FIRInviteBuilder <NSObject>
 
 /// Sets the delegate object that will receive callbacks after the invite dialog closes.
@@ -104,11 +109,12 @@ typedef NS_ENUM(NSUInteger, FIRReceivedInviteMatchType) {
 @end
 
 /// The main entry point for the invite APIs.
+FIR_SWIFT_NAME(Invites)
 @interface FIRInvites : NSObject
 
 /// App Invite requires defining the client ID if the invite is received on a different platform
 /// than iOS. If an Android client ID is defined in the GoogleService-Info.plist, the targetApp will
-/// automatically be configured by calling [FIRApp configre] as a target app for new invites. This
+/// automatically be configured by calling [FIRApp configure] as a target app for new invites. This
 /// property allows retrieving a copy of that |GINInviteTargetApplication|.
 @property(nonatomic) FIRInvitesTargetApplication *targetApp;
 

@@ -2,7 +2,6 @@ framework module FirebaseInvites {
   umbrella header "FirebaseInvites.h"
   export *
   module * { export *}
-  link "c++"
   link "sqlite3"
   link "z"
   link framework "AddressBook"

@@ -1,9 +1,18 @@
 #import <Foundation/Foundation.h>
 
+// NS_SWIFT_NAME can only translate factory methods before the iOS 9.3 SDK.
+// Wrap it in our own macro if it's a non-compatible SDK.
+#ifndef FIR_SWIFT_NAME
+#ifdef __IPHONE_9_3
+#define FIR_SWIFT_NAME(X) NS_SWIFT_NAME(X)
+#else
+#define FIR_SWIFT_NAME(X)  // Intentionally blank.
+#endif  // #ifdef __IPHONE_9_3
+#endif  // #ifndef FIR_SWIFT_NAME
+
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * @enum FIRShortDynamicLinkPathLength
  * @abstract Enum used to define the desired path length for shortened Dynamic Link URLs.
  */
 typedef NS_ENUM(NSInteger, FIRShortDynamicLinkPathLength) {
@@ -15,7 +24,7 @@ typedef NS_ENUM(NSInteger, FIRShortDynamicLinkPathLength) {
   FIRShortDynamicLinkPathLengthShort,
   /** Short link with an extra long path for great difficulty in guessing. */
   FIRShortDynamicLinkPathLengthUnguessable,
-};
+} FIR_SWIFT_NAME(ShortDynamicLinkPathLength);
 
 /**
  * @abstract The definition of the completion block used by URL shortener.
@@ -27,13 +36,14 @@ typedef NS_ENUM(NSInteger, FIRShortDynamicLinkPathLength) {
  */
 typedef void (^FIRDynamicLinkShortenerCompletion)(NSURL * _Nullable shortURL,
   NSArray<NSString *> * _Nullable warnings,
-  NSError * _Nullable error);
+  NSError * _Nullable error) FIR_SWIFT_NAME(DynamicLinkShortenerCompletion);
 
 
 /**
  * @class FIRDynamicLinkGoogleAnalyticsParameters
  * @abstract The Dynamic Link analytics parameters.
  */
+FIR_SWIFT_NAME(DynamicLinkGoogleAnalyticsParameters)
 @interface FIRDynamicLinkGoogleAnalyticsParameters : NSObject
 
 /**
@@ -108,6 +118,7 @@ typedef void (^FIRDynamicLinkShortenerCompletion)(NSURL * _Nullable shortURL,
  * @class FIRDynamicLinkIOSParameters
  * @abstract The Dynamic Link iOS parameters.
  */
+FIR_SWIFT_NAME(DynamicLinkIOSParameters)
 @interface FIRDynamicLinkIOSParameters : NSObject
 
 /**
@@ -177,6 +188,7 @@ NS_SWIFT_UNAVAILABLE("Use initWithBundleID()");
  * @class FIRDynamicLinkItunesConnectAnalyticsParameters
  * @abstract The Dynamic Link iTunes Connect parameters.
  */
+FIR_SWIFT_NAME(DynamicLinkItunesConnectAnalyticsParameters)
 @interface FIRDynamicLinkItunesConnectAnalyticsParameters : NSObject
 
 /**
@@ -212,6 +224,7 @@ NS_SWIFT_UNAVAILABLE("Use initWithBundleID()");
  * @class FIRDynamicLinkAndroidParameters
  * @abstract The Dynamic Link Android parameters.
  */
+FIR_SWIFT_NAME(DynamicLinkAndroidParameters)
 @interface FIRDynamicLinkAndroidParameters : NSObject
 
 /**
@@ -253,6 +266,7 @@ NS_SWIFT_UNAVAILABLE("Use initWithPackageName()");
  * @class FIRDynamicLinkSocialMetaTagParameters
  * @abstract The Dynamic Link Social Meta Tag parameters.
  */
+FIR_SWIFT_NAME(DynamicLinkSocialMetaTagParameters)
 @interface FIRDynamicLinkSocialMetaTagParameters : NSObject
 
 /**
@@ -287,6 +301,7 @@ NS_SWIFT_UNAVAILABLE("Use initWithPackageName()");
  * @class FIRDynamicLinkNavigationInfoParameters
  * @abstract Options class for defining navigation behavior of the Dynamic Link.
  */
+FIR_SWIFT_NAME(DynamicLinkNavigationInfoParameters)
 @interface FIRDynamicLinkNavigationInfoParameters : NSObject
 
 /**
@@ -314,6 +329,7 @@ NS_SWIFT_UNAVAILABLE("Use initWithPackageName()");
  * @class FIRDynamicLinkComponentsOptions
  * @abstract Options class for defining how Dynamic Link URLs are generated.
  */
+FIR_SWIFT_NAME(DynamicLinkComponentsOptions)
 @interface FIRDynamicLinkComponentsOptions : NSObject
 
 /**
@@ -341,6 +357,7 @@ NS_SWIFT_UNAVAILABLE("Use initWithPackageName()");
  *     Dynamic Link URLs. Short URLs will have a domain and a randomized path; long URLs will have a
  *     domain and a query that contains all of the Dynamic Link parameters.
  */
+FIR_SWIFT_NAME(DynamicLinkComponents)
 @interface FIRDynamicLinkComponents : NSObject
 
 /**
