@@ -7,5 +7,4 @@ framework module FirebaseDatabase {
   link "z"
   link framework "CFNetwork"
   link framework "Security"
-  link framework "SystemConfiguration"
-}
+  link framework "SystemConfiguration"}

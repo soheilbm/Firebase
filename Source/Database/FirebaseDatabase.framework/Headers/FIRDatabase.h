@@ -31,6 +31,14 @@ FIR_SWIFT_NAME(Database)
 @interface FIRDatabase : NSObject
 
 /**
+ * The NSObject initializer that has been marked as unavailable. Use the `database`
+ * method instead
+ *
+ * @return An instancetype instance
+*/
++ (instancetype) init __attribute__((unavailable("use the database method instead")));
+
+/**
  * Gets the instance of FIRDatabase for the default FIRApp.
  *
  * @return A FIRDatabase instance.
@@ -43,7 +51,7 @@ FIR_SWIFT_NAME(Database)
  * @param app The FIRApp to get a FIRDatabase for.
  * @return A FIRDatabase instance.
  */
-+ (FIRDatabase *) databaseForApp:(FIRApp*)app FIR_SWIFT_NAME(database(app:));
++ (FIRDatabase *) databaseForApp:(FIRApp *)app FIR_SWIFT_NAME(database(app:));
 
 /** The FIRApp instance to which this FIRDatabase belongs. */
 @property (weak, readonly, nonatomic) FIRApp *app;
