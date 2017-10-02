@@ -11,6 +11,7 @@
 
   #if __has_include(<FirebaseAuth/FirebaseAuth.h>)
     #import <FirebaseAuth/FirebaseAuth.h>
+    #import <FirebaseAuth/FIREmailPasswordAuthProvider.h>
   #endif
 
   #if __has_include(<FirebaseCrash/FirebaseCrash.h>)
