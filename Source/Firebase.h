@@ -11,7 +11,6 @@
 
   #if __has_include(<FirebaseAuth/FirebaseAuth.h>)
     #import <FirebaseAuth/FirebaseAuth.h>
-    #import <FirebaseAuth/FIREmailPasswordAuthProvider.h>
   #endif
 
   #if __has_include(<FirebaseCrash/FirebaseCrash.h>)
@@ -24,6 +23,10 @@
 
   #if __has_include(<FirebaseDynamicLinks/FirebaseDynamicLinks.h>)
     #import <FirebaseDynamicLinks/FirebaseDynamicLinks.h>
+  #endif
+
+  #if __has_include(<FirebaseFirestore/FirebaseFirestore.h>)
+    #import <FirebaseFirestore/FirebaseFirestore.h>
   #endif
 
   #if __has_include(<FirebaseInstanceID/FirebaseInstanceID.h>)
