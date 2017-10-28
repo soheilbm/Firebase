@@ -4,5 +4,4 @@ framework module FirebaseStorage {
   module * { export *}
   link "z"
   link framework "MobileCoreServices"
-  link framework "Security"
-}
+  link framework "Security"}

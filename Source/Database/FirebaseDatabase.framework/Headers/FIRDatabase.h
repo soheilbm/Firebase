@@ -31,6 +31,14 @@ FIR_SWIFT_NAME(Database)
 @interface FIRDatabase : NSObject
 
 /**
+ * The NSObject initializer that has been marked as unavailable. Use the `database`
+ * method instead
+ *
+ * @return An instancetype instance
+*/
++ (instancetype) init __attribute__((unavailable("use the database method instead")));
+
+/**
  * Gets the instance of FIRDatabase for the default FIRApp.
  *
  * @return A FIRDatabase instance.
@@ -38,12 +46,33 @@ FIR_SWIFT_NAME(Database)
 + (FIRDatabase *) database FIR_SWIFT_NAME(database());
 
 /**
+ * Gets a FirebaseDatabase instance for the specified URL.
+ *
+ * @param url The URL to the Firebase Database instance you want to access.
+ * @return A FIRDatabase instance.
+ */
++ (FIRDatabase *)databaseWithURL:(NSString *)url NS_SWIFT_NAME(database(url:));
+
+/**
+ * Gets a FirebaseDatabase instance for the specified URL, using the specified
+ * FirebaseApp.
+ *
+ * @param app The FIRApp to get a FIRDatabase for.
+ * @param url The URL to the Firebase Database instance you want to access.
+ * @return A FIRDatabase instance.
+ */
+// clang-format off
++ (FIRDatabase *)databaseForApp:(FIRApp *)app
+                            URL:(NSString *)url NS_SWIFT_NAME(database(app:url:));
+// clang-format on
+
+/**
  * Gets an instance of FIRDatabase for a specific FIRApp.
  *
  * @param app The FIRApp to get a FIRDatabase for.
  * @return A FIRDatabase instance.
  */
-+ (FIRDatabase *) databaseForApp:(FIRApp*)app FIR_SWIFT_NAME(database(app:));
++ (FIRDatabase *) databaseForApp:(FIRApp *)app FIR_SWIFT_NAME(database(app:));
 
 /** The FIRApp instance to which this FIRDatabase belongs. */
 @property (weak, readonly, nonatomic) FIRApp *app;

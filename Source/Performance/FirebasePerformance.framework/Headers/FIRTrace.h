@@ -30,7 +30,8 @@ FIR_SWIFT_NAME(Trace)
 
 /**
  * Increments the counter for the provided counter name by 1. If it is a new counter name, the
- * counter value will be initialized to 1.
+ * counter value will be initialized to 1. Does nothing if the trace has not been started or has
+ * already been stopped.
  *
  * @param counterName The name of the counter to increment.
  */
@@ -38,7 +39,9 @@ FIR_SWIFT_NAME(Trace)
     FIR_SWIFT_NAME(incrementCounter(named:));
 
 /**
- * Increments the counter for the provided counter name with the provided value.
+ * Increments the counter for the provided counter name with the provided value. If it is a new
+ * counter name, the counter value will be initialized to the value. Does nothing if the trace has
+ * not been started or has already been stopped.
  *
  * @param counterName The name of the counter to increment.
  * @param incrementValue The value the counter would be incremented with.
