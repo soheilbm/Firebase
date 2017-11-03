@@ -1,139 +1,182 @@
-# WARNING
+# Firebase iOS SDKs
 
-Unofficial Firebase for Carthage.
+This directory contains the full Firebase distribution, packaged as static
+frameworks that can be integrated into your app.
 
-----
+# Integration Instructions
 
-# Firebase
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+Each Firebase component requires several frameworks in order to function
+properly. Each section below lists the frameworks you'll need to include
+in your project in order to use that Firebase SDK in your application.
 
-## Usage
-The iOS Example file is a sample of using core firebase (analytics). 
+To integrate a Firebase SDK with your app:
 
-You need to add <b>GoogleService info plist</b> to your main project. (iOS Example project also needs Googleservice info plist)
-
-## Installation
-
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate Firebase into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "soheilbm/Firebase" ~> 3.6.0
-```
-
-Run `carthage update` to build the framework and drag the built `Firebase.framework` into your Xcode project.
-
-- Add the -ObjC flag to "Other Linker Settings"
-- Turn on ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES in your build settings.
-- Drag each framework from the directory named after the SDK into the Project
+1. Find the desired SDK in the list below.
+2. Make sure you have an Xcode project open in Xcode.
+3. In Xcode, hit `⌘-1` to open the Project Navigator pane. It will open on
+   left side of the Xcode window if it wasn't already open.
+4. Drag each framework from the "Analytics" directory into the Project
+   Navigator pane. In the dialog box that appears, make sure the target you
+   want the framework to be added to has a checkmark next to it, and that
+   you've selected "Copy items if needed". If you already have Firebase
+   frameworks in your project, make sure that you replace them with the new
+   versions.
+5. Drag each framework from the directory named after the SDK into the Project
    Navigator pane. Note that there may be no additional frameworks, in which
    case this directory will be empty. For instance, if you want the Database
    SDK, look in the Database folder for the required frameworks. In the dialog
    box that appears, make sure the target you want this framework to be added to
-   has a checkmark next to it, and that you've selected "Copy items if needed.
+   has a checkmark next to it, and that you've selected "Copy items if needed."
 
+   *Do not add the Firebase frameworks to the "Embed Frameworks" Xcode build
+   phase. The Firebase frameworks are not embedded dynamic frameworks, but are
+   (static frameworks)[https://www.raywenderlich.com/65964/create-a-framework-for-ios]
+   which cannot be embedded into your application's bundle.*
+
+6. If the SDK has resources, go into the Resources folders, which will be in
+   the SDK folder. Drag all of those resources into the Project Navigator, just
+   like the frameworks, again making sure that the target you want to add these
+   resources to has a checkmark next to it, and that you've selected "Copy items
+   if needed".
+7. Add the -ObjC flag to "Other Linker Settings":
+  a. In your project settings, open the Settings panel for your target
+  b. Go to the Build Settings tab and find the "Other Linker Flags" setting
+     in the Linking section.
+  c. Double-click the setting, click the '+' button, and add "-ObjC" (without
+     quotes)
+8. Drag the `Firebase.h` header in this directory into your project. This will
+   allow you to `#import "Firebase.h"` and start using any Firebase SDK that you
+   have.
+9. If you're using Swift, or you want to use modules, drag module.modulemap into
+   your project and update your User Header Search Paths to contain the
+   directory that contains your module map.
+10. You're done! Compile your target and start using Firebase.
+
+If you want to add another SDK, repeat the steps above with the frameworks for
+the new SDK. You only need to add each framework once, so if you've already
+added a framework for one SDK, you don't need to add it again. Note that some
+frameworks are required by multiple SDKs, and so appear in multiple folders.
+
+The Firebase frameworks list the system libraries and frameworks they depend on
+in their modulemaps. If you have disabled the "Link Frameworks Automatically"
+option in your Xcode project/workspace, you will need to add the system
+frameworks and libraries listed in each Firebase framework's
+<Name>.framework/Modules/module.modulemap file to your target's or targets'
+"Link Binary With Libraries" build phase.
 
 "(~> X)" below means that the SDK requires all of the frameworks from X. You
 should make sure to include all of the frameworks from X when including the SDK.
 
-#### Analytics
+## Analytics
   - FirebaseAnalytics.framework
+  - FirebaseCore.framework
+  - FirebaseCoreDiagnostics.framework
+  - FirebaseNanoPB.framework
   - FirebaseInstanceID.framework
-  - GoogleInterchangeUtilities.framework
-  - GoogleSymbolUtilities.framework
-  - GoogleUtilities.framework
-  
-#### AdMob (~> Analytics)
+  - GoogleToolboxForMac.framework
+  - nanopb.framework
+## ABTesting (~> Analytics)
+  - FirebaseABTesting.framework
+  - Protobuf.framework
+## AdMob (~> Analytics)
   - GoogleMobileAds.framework
- 
-#### AppIndexing (~> Analytics)
-  - FirebaseAppIndexing.framework
-  
-#### Auth (~> Analytics)
+## Auth (~> Analytics)
   - FirebaseAuth.framework
-  - GoogleNetworkingUtilities.framework
-  
-#### Crash (~> Analytics)
+  - GTMSessionFetcher.framework
+## Crash (~> Analytics)
   - FirebaseCrash.framework
-  
-#### Database (~> Analytics)
+  - Protobuf.framework
+## Database (~> Analytics)
   - FirebaseDatabase.framework
-  
-#### DynamicLinks (~> Analytics)
+  - leveldb-library.framework
+## DynamicLinks (~> Analytics)
   - FirebaseDynamicLinks.framework
-  
-#### Invites (~> Analytics)
-  - FirebaseDynamicLinks.framework
-  - FirebaseInvites.framework
-  - GoogleAppUtilities.framework
-  - GoogleAuthUtilities.framework
-  - GoogleNetworkingUtilities.framework
-  - GoogleParsingUtilities.framework
-  - GooglePlusUtilities.framework
-  - GoogleSignIn.framework
+## Firestore (~> Analytics)
+  - BoringSSL.framework
+  - FirebaseAuth.framework
+  - FirebaseFirestore.framework
+  - GTMSessionFetcher.framework
+  - Protobuf.framework
+  - gRPC.framework
+  - gRPC-Core.framework
+  - gRPC-ProtoRPC.framework
+  - gRPC-RxLibrary.framework
+  - leveldb-library.framework
 
   You'll also need to add the resources in the
   Resources directory into your target's main
   bundle.
-  
-#### Messaging (~> Analytics)
+## Invites (~> Analytics)
+  - FirebaseDynamicLinks.framework
+  - FirebaseInvites.framework
+  - GTMOAuth2.framework
+  - GTMSessionFetcher.framework
+  - GoogleAPIClientForREST.framework
+  - GoogleSignIn.framework
+  - Protobuf.framework
+
+  You'll also need to add the resources in the
+  Resources directory into your target's main
+  bundle.
+## Messaging (~> Analytics)
   - FirebaseMessaging.framework
-  - GoogleIPhoneUtilities.framework
-  
-#### RemoteConfig (~> Analytics)
+  - Protobuf.framework
+## Performance (~> Analytics)
+  - FirebasePerformance.framework
+  - GTMSessionFetcher.framework
+  - Protobuf.framework
+## RemoteConfig (~> Analytics)
+  - FirebaseABTesting.framework
   - FirebaseRemoteConfig.framework
-  - GoogleIPhoneUtilities.framework
-  
-#### Storage (~> Analytics)
+  - Protobuf.framework
+## Storage (~> Analytics)
   - FirebaseStorage.framework
-  - GoogleNetworkingUtilities.framework
-  
+  - GTMSessionFetcher.framework
 
+# Samples
 
-### Current Version of Firebase libraries
+You can get samples for Firebase from https://github.com/firebase/quickstart-ios:
+
+    git clone https://github.com/firebase/quickstart-ios
+
+Note that several of the samples depend on SDKs that are not included with
+this archive; for example, FirebaseUI. For the samples that depend on SDKs not
+included in this archive, you'll need to use CocoaPods.
+
+# Versions
+
+The frameworks in this directory map to these versions of the Firebase SDKs in
+CocoaPods.
 
            CocoaPod           | Version
 ----------------------------- | -------
-Firebase                      | 3.6.0
-FirebaseAnalytics             | 3.4.2
-FirebaseAppIndexing           | 1.1.0
-FirebaseAuth                  | 3.0.5
-FirebaseCrash                 | 1.0.7
-FirebaseDatabase              | 3.0.3
-FirebaseDynamicLinks          | 1.3.0
-FirebaseInstanceID            | 1.0.8
-FirebaseInvites               | 1.2.1
-FirebaseMessaging             | 1.2.0
-FirebaseRemoteConfig          | 1.3.0
-FirebaseStorage               | 1.0.3
-Google-Mobile-Ads-SDK         | 7.11.0
-GoogleAppUtilities            | 1.1.1
-GoogleAuthUtilities           | 2.0.1
-GoogleIPhoneUtilities         | 1.2.1
-GoogleInterchangeUtilities    | 1.2.1
-GoogleNetworkingUtilities     | 1.2.1
-GoogleParsingUtilities        | 1.1.1
-GooglePlusUtilities           | 1.1.1
-GoogleSignIn                  | 4.0.0
-GoogleSymbolUtilities         | 1.1.1
-GoogleUtilities               | 1.3.1
+BoringSSL                     | 9.0
+Firebase                      | 4.5.0
+FirebaseABTesting             | 1.0.0
+FirebaseAnalytics             | 4.0.4
+FirebaseAuth                  | 4.3.1
+FirebaseCore                  | 4.0.10
+FirebaseCrash                 | 2.0.2
+FirebaseDatabase              | 4.1.0
+FirebaseDynamicLinks          | 2.1.0
+FirebaseFirestore             | 0.9.1
+FirebaseInstanceID            | 2.0.5
+FirebaseInvites               | 2.0.1
+FirebaseMessaging             | 2.0.6
+FirebasePerformance           | 1.0.6
+FirebaseRemoteConfig          | 2.1.0
+FirebaseStorage               | 2.0.2
+GTMOAuth2                     | 1.1.5
+GTMSessionFetcher             | 1.1.12
+Google-Mobile-Ads-SDK         | 7.25.0
+GoogleAPIClientForREST        | 1.3.1
+GoogleSignIn                  | 4.1.1
+GoogleToolboxForMac           | 2.1.3
+Protobuf                      | 3.4.0
+gRPC                          | 1.6.5
+gRPC-Core                     | 1.6.5
+gRPC-ProtoRPC                 | 1.6.5
+gRPC-RxLibrary                | 1.6.5
+leveldb-library               | 1.18.3
+nanopb                        | 0.3.8
 
-
-## Author
-
-Soheil B.Marvasti
-
-
-## License
-
-I do not own this project.
