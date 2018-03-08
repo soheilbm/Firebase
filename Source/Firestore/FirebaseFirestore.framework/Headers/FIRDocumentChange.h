@@ -16,11 +16,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "FIRFirestoreSwiftNameSupport.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
-@class FIRDocumentSnapshot;
+@class FIRQueryDocumentSnapshot;
 
 /** An enumeration of document change types. */
 typedef NS_ENUM(NSInteger, FIRDocumentChangeType) {
@@ -33,13 +31,13 @@ typedef NS_ENUM(NSInteger, FIRDocumentChangeType) {
    * the query.
    */
   FIRDocumentChangeTypeRemoved
-} FIR_SWIFT_NAME(DocumentChangeType);
+} NS_SWIFT_NAME(DocumentChangeType);
 
 /**
  * A `FIRDocumentChange` represents a change to the documents matching a query. It contains the
  * document affected and the type of change that occurred (added, modified, or removed).
  */
-FIR_SWIFT_NAME(DocumentChange)
+NS_SWIFT_NAME(DocumentChange)
 @interface FIRDocumentChange : NSObject
 
 /**   */
@@ -49,7 +47,7 @@ FIR_SWIFT_NAME(DocumentChange)
 @property(nonatomic, readonly) FIRDocumentChangeType type;
 
 /** The document affected by this change. */
-@property(nonatomic, strong, readonly) FIRDocumentSnapshot *document;
+@property(nonatomic, strong, readonly) FIRQueryDocumentSnapshot *document;
 
 /**
  * The index of the changed document in the result set immediately prior to this FIRDocumentChange

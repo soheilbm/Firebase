@@ -2,4 +2,3 @@
 #import "FIRDynamicLink.h"
 #import "FIRDynamicLinks.h"
 #import "FIRDynamicLinksCommon.h"
-#import "FIRDynamicLinksSwiftNameSupport.h"
