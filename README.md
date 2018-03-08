@@ -48,83 +48,83 @@ Run `carthage update` to build the framework and drag the built `Firebase.framew
 should make sure to include all of the frameworks from X when including the SDK.
 Add the following Framework to your project with [carthage copy-framework](https://github.com/Carthage/Carthage#getting-started) method.
 
+
 #### Analytics
-    - FirebaseAnalytics.framework
-    - FirebaseCore.framework
-    - FirebaseCoreDiagnostics.framework
-    - FirebaseNanoPB.framework
-    - FirebaseInstanceID.framework
-    - GoogleToolboxForMac.framework
-    - nanopb.framework
+  - FirebaseAnalytics.framework
+  - FirebaseNanoPB.framework
+  - FirebaseCoreDiagnostics.framework
+  - FirebaseCore.framework
+  - FirebaseInstanceID.framework
+  - GoogleToolboxForMac.framework
+  - nanopb.framework
 
 #### ABTesting (~> Analytics)
-    - FirebaseABTesting.framework
-    - Protobuf.framework
+  - FirebaseABTesting.framework
+  - Protobuf.framework
 
 #### AdMob (~> Analytics)
-    - GoogleMobileAds.framework
+  - GoogleMobileAds.framework
 
 #### Auth (~> Analytics)
-    - FirebaseAuth.framework
-    - GTMSessionFetcher.framework
+  - FirebaseAuth.framework
+  - GTMSessionFetcher.framework
 
 #### Crash (~> Analytics)
-    - FirebaseCrash.framework
-    - Protobuf.framework
+  - FirebaseCrash.framework
+  - Protobuf.framework
 
 #### Database (~> Analytics)
-    - FirebaseDatabase.framework
-    - leveldb-library.framework
+  - FirebaseDatabase.framework
+  - leveldb-library.framework
 
 #### DynamicLinks (~> Analytics)
-    - FirebaseDynamicLinks.framework
+  - FirebaseDynamicLinks.framework
 
 #### Firestore (~> Analytics)
-    - BoringSSL.framework
-    - FirebaseAuth.framework
-    - FirebaseFirestore.framework
-    - GTMSessionFetcher.framework
-    - Protobuf.framework
-    - gRPC.framework
-    - gRPC-Core.framework
-    - gRPC-ProtoRPC.framework
-    - gRPC-RxLibrary.framework
-    - leveldb-library.framework
+  - BoringSSL.framework
+  - FirebaseFirestore.framework
+  - Protobuf.framework
+  - gRPC.framework
+  - gRPC-Core.framework
+  - gRPC-ProtoRPC.framework
+  - gRPC-RxLibrary.framework
+  - leveldb-library.framework
+
+  You'll also need to add the resources in the
+  Resources directory into your target's main
+  bundle.
 
 #### Invites (~> Analytics)
-You'll also need to add the resources in the
-Resources directory into your target's main
-bundle.
+  - FirebaseDynamicLinks.framework
+  - FirebaseInvites.framework
+  - GTMOAuth2.framework
+  - GTMSessionFetcher.framework
+  - GoogleAPIClientForREST.framework
+  - GoogleSignIn.framework
+  - Protobuf.framework
 
-    - FirebaseDynamicLinks.framework
-    - FirebaseInvites.framework
-    - GTMOAuth2.framework
-    - GTMSessionFetcher.framework
-    - GoogleAPIClientForREST.framework
-    - GoogleSignIn.framework
-    - Protobuf.framework
+  You'll also need to add the resources in the
+  Resources directory into your target's main
+  bundle.
 
 #### Messaging (~> Analytics)
-You'll also need to add the resources in the
-Resources directory into your target's main
-bundle.
-
-    - FirebaseMessaging.framework
-    - Protobuf.framework
+  - FirebaseMessaging.framework
+  - Protobuf.framework
 
 #### Performance (~> Analytics)
-    - FirebasePerformance.framework
-    - GTMSessionFetcher.framework
-    - Protobuf.framework
+  - FirebasePerformance.framework
+  - FirebaseSwizzlingUtilities.framework
+  - GTMSessionFetcher.framework
+  - Protobuf.framework
 
 #### RemoteConfig (~> Analytics)
-    - FirebaseABTesting.framework
-    - FirebaseRemoteConfig.framework
-    - Protobuf.framework
+  - FirebaseABTesting.framework
+  - FirebaseRemoteConfig.framework
+  - Protobuf.framework
 
 #### Storage (~> Analytics)
-    - FirebaseStorage.framework
-    - GTMSessionFetcher.framework
+  - FirebaseStorage.framework
+  - GTMSessionFetcher.framework
 
 # Samples
 
@@ -143,34 +143,36 @@ Carthage.
 
 |           Carthage           | Version |
 ----------------------------- | ------- |
-| BoringSSL                     | 9.0 |
-| Firebase                      | 4.5.0 |
+| BoringSSL                     | 9.2 |
+| Firebase                      | 4.10.0 |
 | FirebaseABTesting             | 1.0.0 |
-| FirebaseAnalytics             | 4.0.4 |
-| FirebaseAuth                  | 4.3.1 |
-| FirebaseCore                  | 4.0.10 |
+| FirebaseAnalytics             | 4.1.0 |
+| FirebaseAuth                  | 4.4.4 |
+| FirebaseCore                  | 4.0.16 |
 | FirebaseCrash                 | 2.0.2 |
-| FirebaseDatabase              | 4.1.0 |
-| FirebaseDynamicLinks          | 2.1.0 |
-| FirebaseFirestore             | 0.9.1 |
-| FirebaseInstanceID            | 2.0.5 |
-| FirebaseInvites               | 2.0.1 |
-| FirebaseMessaging             | 2.0.6 |
-| FirebasePerformance           | 1.0.6 |
-| FirebaseRemoteConfig          | 2.1.0 |
-| FirebaseStorage               | 2.0.2 |
-| GTMOAuth2                     | 1.1.5 |
-| GTMSessionFetcher             | 1.1.12 |
-| Google-Mobile-Ads-SDK         | 7.25.0 |
-| GoogleAPIClientForREST        | 1.3.1 |
-| GoogleSignIn                  | 4.1.1 |
+| FirebaseDatabase              | 4.1.5 |
+| FirebaseDynamicLinks          | 2.3.2 |
+| FirebaseFirestore             | 0.10.2 |
+| FirebaseInstanceID            | 2.0.9 |
+| FirebaseInvites               | 2.0.2 |
+| FirebaseMessaging             | 2.1.1 |
+| FirebasePerformance           | 1.1.2 |
+| FirebaseRemoteConfig          | 2.1.2 |
+| FirebaseStorage               | 2.1.3 |
+| FirebaseSwizzlingUtilities    | 1.0.0 |
+| GTMOAuth2                     | 1.1.6 |
+| GTMSessionFetcher             | 1.1.14 |
+| Google-Mobile-Ads-SDK         | 7.29.0 |
+| GoogleAPIClientForREST        | 1.3.2 |
+| GoogleSignIn                  | 4.1.2 |
 | GoogleToolboxForMac           | 2.1.3 |
-| Protobuf                      | 3.4.0 |
-| gRPC                          | 1.6.5 |
-| gRPC-Core                     | 1.6.5 |
-| gRPC-ProtoRPC                 | 1.6.5 |
-| gRPC-RxLibrary                | 1.6.5 |
-| leveldb-library               | 1.18.3 |
+| Protobuf                      | 3.5.0 |
+| gRPC                          | 1.9.1 |
+| gRPC-Core                     | 1.9.1 |
+| gRPC-ProtoRPC                 | 1.9.1 |
+| gRPC-RxLibrary                | 1.9.1 |
+| leveldb-library               | 1.20 |
+| nanopb                        | 0.3.8 |
 
 ## Author
 
