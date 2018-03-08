@@ -44,6 +44,13 @@ FIR_SWIFT_NAME(ReceivedInvite)
 
 @end
 
+/**
+ * @abstract The definition of the block used by |handleUniversalLink:completion:|
+ */
+typedef void (^FIRInvitesUniversalLinkHandler)(FIRReceivedInvite * _Nullable receivedInvite,
+                                                   NSError * _Nullable error)
+  FIR_SWIFT_NAME(InvitesUniversalLinkHandler);
+
 @class GINInviteTargetApplication;
 
 /// The protocol to receive the result of the invite action.
@@ -135,7 +142,19 @@ FIR_SWIFT_NAME(Invites)
 /// Returns a |FIRReceivedInvite| instance if the URL is an invite deeplink.
 + (nullable id)handleURL:(NSURL *)url
        sourceApplication:(nullable NSString *)sourceApplication
-              annotation:(nullable id)annotation;
+              annotation:(nullable id)annotation
+__deprecated_msg("Use |handleUniversalLink:completion:| instead.");
+
+/**
+ * @method handleUniversalLink:completion:
+ * @abstract Convenience method to handle a Universal Link whether it is long or short. A long link
+ *     will call the handler immediately, but a short link may not.
+ * @param URL A Universal Link URL.
+ * @param completion A block that handles the outcome of attempting to create a FIRReceivedInvite.
+ * @return YES if FIRInvites is handling the link, otherwise, NO.
+ */
++ (BOOL)handleUniversalLink:(NSURL *)URL
+                 completion:(FIRInvitesUniversalLinkHandler)completion;
 
 /// Sends google analytics data after the invitation flow is completed. You could call this
 /// method in your application after you obtain a |FIRReceivedInvite| instance in

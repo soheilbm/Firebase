@@ -363,6 +363,33 @@ FIR_SWIFT_NAME(DynamicLinkNavigationInfoParameters)
 @end
 
 /**
+ * @class FIRDynamicLinkOtherPlatformParameters
+ * @abstract Options class for defining other platform(s) parameters of the Dynamic Link.
+ *     Other here means not covered by specific parameters (not iOS and not Android).
+ */
+FIR_SWIFT_NAME(DynamicLinkOtherPlatformParameters)
+@interface FIRDynamicLinkOtherPlatformParameters : NSObject
+
+/**
+ * @property fallbackUrl
+ * @abstract Property defines fallback URL to navigate to when Dynamic Link is clicked on
+ *     other platform.
+ */
+@property(nonatomic, nullable) NSURL *fallbackUrl;
+
+/**
+ * @method parameters
+ * @abstract A method for creating the Other platform parameters object.
+ * @return Returns an object to be used with FIRDynamicLinkURLComponents to add Other Platform
+ *     parameters to a generated Dynamic Link URL.
+ */
++ (instancetype)parameters NS_SWIFT_UNAVAILABLE("Use init()");
+
+- (instancetype)init;
+
+@end
+
+/**
  * @class FIRDynamicLinkComponentsOptions
  * @abstract Options class for defining how Dynamic Link URLs are generated.
  */
@@ -434,6 +461,11 @@ FIR_SWIFT_NAME(DynamicLinkComponents)
  * @abstract Applies Navigation Info parameters to a generated Dynamic Link URL.
  */
 @property(nonatomic, nullable) FIRDynamicLinkNavigationInfoParameters *navigationInfoParameters;
+/**
+ * @property otherPlatformParameters
+ * @abstract Applies Other platform parameters to a generated Dynamic Link URL.
+ */
+@property(nonatomic, nullable) FIRDynamicLinkOtherPlatformParameters *otherPlatformParameters;
 /**
  * @property options
  * @abstract Defines behavior for generating Dynamic Link URLs.

@@ -2,7 +2,6 @@
 
 #import "FIRDynamicLink.h"
 #import "FIRDynamicLinksCommon.h"
-#import "FIRDynamicLinksSwiftNameSupport.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @class FIRDynamicLinks
  * @abstract A class that checks for pending Dynamic Links and parses URLs.
  */
-FIR_SWIFT_NAME(DynamicLinks)
+NS_SWIFT_NAME(DynamicLinks)
 @interface FIRDynamicLinks : NSObject
 
 /**
@@ -23,7 +22,7 @@ FIR_SWIFT_NAME(DynamicLinks)
  * @abstract Shared instance of FIRDynamicLinks. Returns nil on iOS versions prior to 8.
  * @return Shared instance of FIRDynamicLinks.
  */
-+ (nullable instancetype)dynamicLinks FIR_SWIFT_NAME(dynamicLinks());
++ (nullable instancetype)dynamicLinks NS_SWIFT_NAME(dynamicLinks());
 
 /**
  * @method shouldHandleDynamicLinkFromCustomSchemeURL:
@@ -34,7 +33,7 @@ FIR_SWIFT_NAME(DynamicLinks)
  * @return Whether the URL can be handled by FIRDynamicLinks.
  */
 - (BOOL)shouldHandleDynamicLinkFromCustomSchemeURL:(NSURL *)url
-    FIR_SWIFT_NAME(shouldHandleDynamicLink(fromCustomSchemeURL:));
+    NS_SWIFT_NAME(shouldHandleDynamicLink(fromCustomSchemeURL:));
 
 /**
  * @method dynamicLinkFromCustomSchemeURL:
@@ -47,7 +46,7 @@ FIR_SWIFT_NAME(DynamicLinks)
  * @return Dynamic Link object if the URL is valid and has link parameter, otherwise nil.
  */
 - (nullable FIRDynamicLink *)dynamicLinkFromCustomSchemeURL:(NSURL *)url
-    FIR_SWIFT_NAME(dynamicLink(fromCustomSchemeURL:));
+    NS_SWIFT_NAME(dynamicLink(fromCustomSchemeURL:));
 
 /**
  * @method dynamicLinkFromUniversalLinkURL:
@@ -60,7 +59,7 @@ FIR_SWIFT_NAME(DynamicLinks)
  * @return Dynamic Link object if the URL is valid and has link parameter, otherwise nil.
  */
 - (nullable FIRDynamicLink *)dynamicLinkFromUniversalLinkURL:(NSURL *)url
-    FIR_SWIFT_NAME(dynamicLink(fromUniversalLink:));
+    NS_SWIFT_NAME(dynamicLink(fromUniversalLink:));
 
 /**
  * @method handleUniversalLink:completion:
