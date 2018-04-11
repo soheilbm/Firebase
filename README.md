@@ -1,6 +1,11 @@
+#  [DEPRECATED] This Repository is no Longer Maintained
+
+This was an experimental project. Firebase team has already started to work on carthage support in their main repository. 
+For more information please refer to [Firebase-iOS-Carthage](https://github.com/firebase/firebase-ios-sdk/blob/master/Carthage.md).
+
+
 # Firebase-Carthage
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![GitHub release](https://img.shields.io/github/release/soheilbm/Firebase.svg)](https://github.com/soheilbm/Firebase/releases)
 
 #### Unofficial Carthage support for Firebase.
 
